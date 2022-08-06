@@ -1,0 +1,21 @@
+<h1>Project Details</h1>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Emp</th>
+        <th colspan="2">Action</th>
+    </tr>
+    {% for i in pl %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.get_emplist}}</td>
+            <td><a href="editpro/{{i.id}}">Edit</a></td>
+            <td><a href="deletepro/{{i.id}}">Delete</a></td>
+        </tr>
+    {% endfor %}
+</table>
